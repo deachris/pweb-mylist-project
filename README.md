@@ -52,6 +52,6 @@ Ketika merequest dengan kategori yang tidak tersedia, maka akan menampilkan resp
 
 5. GET Id yang Tidak Ada
 
-![alt text](image.png)
+![alt text](src/images/5-postman.png)
 
 Id yang tersisa tidak ada karena sebelumnya sudah dihapus, sehingga ketika melakukan PUT ataupun GET, hasilnya akan 404 not found.
