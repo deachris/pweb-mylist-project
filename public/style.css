@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: aliceblue;
+    color: #050000;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 30px;
+    color: #ffffff;
+    background-color: #1f3a5f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.web-name {
+    font: bold 30px/1.2 "Georgia", serif;
+    letter-spacing: 1px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font: 20px/1.2 "Georgia", serif;
+}
+
+.nav-bar h2 {
+    margin: 0;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: inherit;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-bar h2:hover,
+.nav-bar h2.active {
+    background-color: #ffffff;
+    color: #1f3a5f;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#form-search {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 18px;
+    border: 1px solid #d6e0ee;
+    border-radius: 999px;
+    background: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1f3a5f;
+    box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.15);
+}
+
+button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 999px;
+    background-color: #1f3a5f;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2f5a94;
+}
+
+.display {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(220px, 1fr)
+    );
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(31, 58, 95, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(31, 58, 95, 0.18);
+}
+
+.box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    background: #bde0ff;
+    color: #1f3a5f;
+    font: bold 64px "Georgia", serif;
+}
+
+.category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #1f3a5f;
+    color: #ffffff;
+    font: 600 12px Arial, sans-serif;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.card-body h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-body p {
+    margin: 0;
+    color: #5b6b82;
+    font-size: 14px;
+}
+
+.status {
+    align-self: flex-start;
+    padding: 4px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.done {
+    background: #dcf5e7;
+    color: #17653a;
+}
+
+.status.in-progress {
+    background: #fff3d1;
+    color: #7a5200;
+}
+
+.status.not-started {
+    background: #e3e8f0;
+    color: #3a4a63;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-edit {
+    background-color: #2f6fd1;
+}
+
+.btn-edit:hover {
+    background-color: #1f56a5;
+}
+
+.btn-delete {
+    background-color: #bde0ff;
+    color: #1f3a5f;
+}
+
+.btn-delete:hover {
+    background-color: #91c9f5;
+}
+
+#form-item {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(31, 58, 95, 0.1);
+}
+
+.form-head h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(160px, 1fr)
+    );
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.form-grid input,
+.form-grid select {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid #d6e0ee;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #050000;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+    border-color: #1f3a5f;
+    box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.15);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+#btn-cancel {
+    background-color: #5b6b82;
+}
+
+#btn-cancel:hover {
+    background-color: #3f4d61;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    color: #5b6b82;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+    .web-name {
+        font-size: 26px;
+    }
+    .nav-bar {
+        gap: 4px;
+        font-size: 16px;
+    }
+    .nav-bar h2 {
+        padding: 6px 12px;
+    }
+    .container {
+        padding: 20px 16px;
+    }
+    .display {
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(160px, 1fr)
+        );
+        gap: 16px;
+    }
+    .box {
+        height: 140px;
+    }
+    .card-body {
+        padding: 12px;
+    }
+    .card-body h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .display {
+        grid-template-columns: 1fr;
+    }
+    #form-search {
+        flex-direction: column;
+    }
+    #form-search button {
+        width: 100%;
+    }
+}

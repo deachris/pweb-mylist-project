@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Category {
+  Film
+  Series
+  Books
+}
+
+enum Status {
+  not_started @map("not-started")
+  in_progress @map("in-progress")
+  done
+}
+
+model Item {
+  id        Int      @id @default(autoincrement())
+  title     String
+  category  Category
+  genre     String
+  rating    String
+  status    Status   @default(not_started)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
